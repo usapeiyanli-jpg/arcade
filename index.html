@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brandon's Task Claw</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="arcade">
+      <section class="machine" aria-label="Task claw machine game">
+        <div class="marquee">
+          <span class="bulb"></span>
+          <h1>Brandon's Task Claw</h1>
+          <span class="bulb"></span>
+        </div>
+
+        <div class="scoreboard" aria-live="polite">
+          <div>
+            <span class="label">Tickets</span>
+            <strong id="tickets">0</strong>
+          </div>
+          <div>
+            <span class="label">Streak</span>
+            <strong id="streak">0</strong>
+          </div>
+          <div>
+            <span class="label">Prize</span>
+            <strong id="rank">Rookie</strong>
+          </div>
+        </div>
+
+        <div class="cabinet">
+          <div class="cabinet-lights" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="glass">
+            <div class="side-trim left-trim" aria-hidden="true"></div>
+            <div class="side-trim right-trim" aria-hidden="true"></div>
+            <div class="rail"></div>
+            <div class="claw" id="claw" aria-hidden="true">
+              <div class="cable"></div>
+              <div class="hub"></div>
+              <div class="arm arm-left"></div>
+              <div class="arm arm-right"></div>
+            </div>
+            <div class="arena" id="arena"></div>
+            <div class="drop-zone">
+              <i></i>
+              <span>Prize chute</span>
+            </div>
+            <div class="reward-pop" id="rewardPop">Task caught!</div>
+          </div>
+
+          <div class="controls">
+            <button type="button" id="leftBtn" aria-label="Move claw left">&lt;</button>
+            <button type="button" id="dropBtn">Drop</button>
+            <button type="button" id="rightBtn" aria-label="Move claw right">&gt;</button>
+          </div>
+        </div>
+
+        <div class="task-panel">
+          <div>
+            <span class="label">Current Catch</span>
+            <p id="currentTask">Line up the claw and catch a task.</p>
+          </div>
+          <button type="button" id="resetBtn">Restock</button>
+        </div>
+
+        <section class="trophy-panel" aria-label="Earned trophies">
+          <div class="trophy-heading">
+            <div>
+              <span class="label">Trophy Shelf</span>
+              <h2 id="trophyCount">0 trophies</h2>
+            </div>
+            <p id="trophyStatus" aria-live="polite">Clear every task in the machine to win a trophy.</p>
+          </div>
+          <div class="trophy-shelf" id="trophyShelf">
+            <div class="empty-trophy">No trophies yet</div>
+          </div>
+        </section>
+
+        <section class="shop-panel" aria-label="Ticket cosmetics shop">
+          <div class="shop-heading">
+            <div>
+              <span class="label">Ticket Shop</span>
+              <h2>Cosmetics</h2>
+            </div>
+            <p id="shopStatus" aria-live="polite">Catch tasks, earn tickets, then dress up the machine.</p>
+          </div>
+          <div class="shop-grid" id="shopGrid"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
