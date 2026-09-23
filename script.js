@@ -180,7 +180,7 @@ function updateScore(points, taskName) {
   tickets += points;
   streak += 1;
   streakEl.textContent = streak;
-  currentTaskEl.textContent = `${taskName} finished. Brandon earns ${points} tickets.`;
+  currentTaskEl.textContent = `${taskName} finished. You earn ${points} tickets.`;
   updateTicketDisplay();
 }
 
@@ -221,7 +221,7 @@ function awardTrophy() {
   trophies.push(trophyName);
   tickets += bonus;
   trophyStatus.textContent = `${trophyName} earned for clearing the machine. Bonus: ${bonus} tickets.`;
-  currentTaskEl.textContent = `Machine cleared. Brandon wins the ${trophyName} trophy.`;
+  currentTaskEl.textContent = `Machine cleared. You win the ${trophyName} trophy.`;
   rewardPop.textContent = `Trophy won! +${bonus}`;
   rewardPop.classList.remove("show");
   void rewardPop.offsetWidth;
